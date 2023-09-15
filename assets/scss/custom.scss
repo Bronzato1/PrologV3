@@ -1,0 +1,50 @@
+// Add your own custom styles here
+.cog {
+  background-color: #040404;
+  border-radius: 50px;
+  color: white !important;
+  border: 1.5px dashed white;
+  margin: 5px;
+}
+
+html.dark .cog {
+  background-color: rgb(227, 227, 227);
+  color: #040404 !important;
+  border: 1.5px dashed #040404;
+}
+
+:is(.dark .btn-outline-primary) {
+  border-color: rgb(227, 227, 227);
+}
+
+.drop-shadow {
+  filter: drop-shadow(0px 5px 5px #555);
+}
+
+html.dark .drop-shadow {
+  filter: none;
+}
+
+.section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+html.dark .invert-color-11 {
+  -webkit-filter: invert(11%);
+  filter: invert(11%);
+}
+
+html:not(.dark) .invert-color-100 {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+html.dark .invert-color-89 {
+  -webkit-filter: invert(89%);
+  filter: invert(89%);
+}
+
+.zoom-10 {
+  zoom: 10%;
+}
