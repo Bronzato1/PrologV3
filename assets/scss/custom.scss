@@ -1,6 +1,6 @@
 // Add your own custom styles here
 .cog {
-  background-color: #222222;
+  background-color: black;
   border-radius: 50px;
   color: white !important;
   border: 1.5px dashed white;
@@ -12,6 +12,7 @@ html.dark div:not(.swiper-slide) > .cog {
 }
 
 html.dark .cog {
+  background-color: #222222;
   color: #222222 !important;
   border: 1.5px dashed #222222;
 }
@@ -33,12 +34,17 @@ html.dark .drop-shadow {
   padding-bottom: 3rem;
 }
 
-.invert-color-87 {
+html.dark .invert-color-87 {
   -webkit-filter: invert(87%);
   filter: invert(87%);
 }
 
-html:not(.dark) .invert-color-100 {
+/*html:not(.dark) .invert-color-100 {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}*/
+
+.invert-color-100 {
   -webkit-filter: invert(100%);
   filter: invert(100%);
 }
