@@ -68,7 +68,7 @@
                 {{ .Title | markdownify }}
               </h2>
               <p>
-                <span class="cog px-1.5 py-px text-xs leading-4 h-5 tracking-widest font-thin">{{ .Params.info }}</span>
+                <span class="cog cog-red px-1.5 py-px text-xs leading-4 h-5 tracking-widest font-thin">{{ .Params.info }}</span>
                 {{ .Params.description | markdownify }}
               </p>
             </div>
@@ -111,7 +111,7 @@
                 {{ .title | markdownify }}
               </h2>
               <p class="mb-8 text-lg">
-                <span class="cog px-1.5 py-px text-xs leading-4 h-5 tracking-widest font-thin">{{ .info }}</span>
+                <span class="cog cog-red px-1.5 py-px text-xs leading-4 h-5 tracking-widest font-thin">{{ .info }}</span>
                 {{ .content | markdownify }}
               </p>
               <ul>

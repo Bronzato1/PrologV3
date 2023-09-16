@@ -7,6 +7,10 @@
   margin: 5px;
 }
 
+.cog-red {
+  background-color: #a51112 !important;
+}
+
 html.dark div:not(.swiper-slide) > .cog {
   background-color: rgb(227, 227, 227);
 }
