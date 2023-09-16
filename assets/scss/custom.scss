@@ -1,16 +1,19 @@
 // Add your own custom styles here
 .cog {
-  background-color: #040404;
+  background-color: #222222;
   border-radius: 50px;
   color: white !important;
   border: 1.5px dashed white;
   margin: 5px;
 }
 
-html.dark .cog {
+html.dark div:not(.swiper-slide) > .cog {
   background-color: rgb(227, 227, 227);
-  color: #040404 !important;
-  border: 1.5px dashed #040404;
+}
+
+html.dark .cog {
+  color: #222222 !important;
+  border: 1.5px dashed #222222;
 }
 
 :is(.dark .btn-outline-primary) {
@@ -30,9 +33,9 @@ html.dark .drop-shadow {
   padding-bottom: 3rem;
 }
 
-html.dark .invert-color-11 {
-  -webkit-filter: invert(11%);
-  filter: invert(11%);
+.invert-color-87 {
+  -webkit-filter: invert(87%);
+  filter: invert(87%);
 }
 
 html:not(.dark) .invert-color-100 {
