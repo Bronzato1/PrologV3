@@ -10,11 +10,11 @@
                 {{ .title | markdownify }}
               </h1>
               <p class="mb-8">
-                {{ .content | markdownify }}
+                {{ .content1 | markdownify }}
               </p>
-              {{ with .button }}
+              {{ with .button1 }}
                 {{ if .enable }}
-                  <a class="cog btn btn-primary" href="{{ .link | absURL }}">
+                  <a class="cog rounded-full btn btn-primary" href="{{ .link | absURL }}">
                     {{ .label }}
                     <i class="fa fa-arrow-right pl-2"></i>
                   </a>
@@ -22,7 +22,21 @@
               {{ end }}
             </div>
             <div class="col-12">
-              {{ partial "image" (dict "Src" .image "Alt" "Banner image" "Loading" "eager" "Class" "mx-auto" "Size" "800x") }}
+              {{ partial "image" (dict "Src" .image "Alt" "Banner image" "Loading" "eager" "Class" "block dark:hidden mx-auto" "Size" "800x") }}
+              {{ partial "image" (dict "Src" .image_dark "Alt" "Banner image" "Loading" "eager" "Class" "hidden dark:block mx-auto" "Size" "800x") }}
+            </div>
+            <div class="lg:col-7 mb-8 text-center">
+              <p class="mb-8">
+                {{ .content2 | markdownify }}
+              </p>
+              {{ with .button2 }}
+              {{ if .enable }}
+              <a class="cog rounded-full btn btn-primary" href="{{ .link }}">
+                {{ .label }}
+                <i class="fa fa-arrow-right pl-2"></i>
+              </a>
+              {{ end }}
+              {{ end }}
             </div>
           </div>
         </div>
@@ -68,7 +82,7 @@
                 {{ .Title | markdownify }}
               </h2>
               <p>
-                <span class="cog cog-red px-1.5 py-px text-xs leading-4 h-5 tracking-widest font-thin">{{ .Params.info }}</span>
+                <span class="cog cog-red rounded-full px-1.5 py-px text-xs leading-4 h-5 tracking-widest font-thin">{{ .Params.info }}</span>
                 {{ .Params.description | markdownify }}
               </p>
             </div>
@@ -93,6 +107,8 @@
     <!-- /Process -->
 
     <!-- Features -->
+    <a id="book"></a>
+    <br/>
     {{ range $i, $e:= .Params.features }}
       <section class="section-sm">
         <div class="container">
@@ -100,8 +116,9 @@
             <div
               class="mb:md-0 {{ if not (modBool $i 2) }}
                 md:order-2
-              {{ end }} md:col-5 mb-6">
-              {{ partial "image" (dict "Src" .image "Class" "drop-shadow" "Alt" "feature image") }}
+              {{ end }} md:col-5 my-6 p-0">
+              {{ partial "image" (dict "Src" .image "Class" "block dark:hidden" "Alt" "feature image") }}
+              {{ partial "image" (dict "Src" .image_dark "Class" "hidden dark:block" "Alt" "feature image") }}
             </div>
             <div
               class="{{ if not (modBool $i 2) }}
@@ -111,7 +128,7 @@
                 {{ .title | markdownify }}
               </h2>
               <p class="mb-8 text-lg">
-                <span class="cog cog-red px-1.5 py-px text-xs leading-4 h-5 tracking-widest font-thin">{{ .info }}</span>
+                <span class="cog cog-yellow rounded-full px-1.5 py-px text-xs leading-4 h-5 tracking-widest font-thin">{{ .info }}</span>
                 {{ .content | markdownify }}
               </p>
               <ul>
@@ -124,7 +141,7 @@
               </ul>
               {{ with .button }}
                 {{ if .enable }}
-                  <a class="cog btn btn-primary mt-6" href="{{ .link | absURL }}">
+                  <a class="cog rounded-full btn btn-primary mt-6" href="{{ .link | absURL }}">
                     {{ .label }}
                     <i class="fa fa-arrow-right pl-2"></i>
                   </a>
@@ -223,10 +240,11 @@
                   <div class="swiper-wrapper">
                     {{ range .Params.blogposts }}
                       <div class="swiper-slide w-auto">
-                        <div class="cog rounded-lg">
+                        <div class="cog rounded-full">
+                          <i class="top-[15px] dark:top-[-8px] dash dash-{{ .color }} absolute left-0 right-0 !m-auto z-10"></i>
                           <div class="flex items-center btn">
                             <a href="{{ .link }}">
-                              {{ partial "image" (dict "Src" .image "Class" "rounded-full invert-color-87 invert-color-100 zoom-15") }}
+                              {{ partial "image" (dict "Src" .image "Class" "rounded-full invert-color-10 invert-color-100 zoom-15") }}
                             </a>
                           </div>
                         </div>

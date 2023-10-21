@@ -1,14 +1,13 @@
 // Add your own custom styles here
 .cog {
   background-color: black;
-  border-radius: 70px;
   color: white !important;
   border: 1.5px dashed white;
   margin: 5px;
 }
 
-.cog-red {
-  background-color: #a51112 !important;
+.cog-yellow {
+  background-color: #f1c76d !important;
 }
 
 html.dark div:not(.swiper-slide) > .cog {
@@ -16,7 +15,7 @@ html.dark div:not(.swiper-slide) > .cog {
 }
 
 html.dark .cog {
-  background-color: #222222;
+  background-color: #e5e5e5;
   color: #222222 !important;
   border: 1.5px dashed #222222;
 }
@@ -38,15 +37,10 @@ html.dark .drop-shadow {
   padding-bottom: 3rem;
 }
 
-html.dark .invert-color-87 {
-  -webkit-filter: invert(87%);
-  filter: invert(87%);
+html.dark .invert-color-10 {
+  -webkit-filter: invert(10%);
+  filter: invert(10%);
 }
-
-/*html:not(.dark) .invert-color-100 {
-  -webkit-filter: invert(100%);
-  filter: invert(100%);
-}*/
 
 .invert-color-100 {
   -webkit-filter: invert(100%);
@@ -61,3 +55,28 @@ html.dark .invert-color-89 {
 .zoom-15 {
   zoom: 15%;
 }
+
+.dash-green {
+  --dash-color: #36ff00;
+}
+
+.dash-yellow {
+  --dash-color: #f2ff00;
+}
+
+.dash-purple {
+  --dash-color: #00fcff;
+}
+
+.dash {
+  width: 20px;
+  height: 8px;
+  display: inline-block;
+  background-color: var(--dash-color);
+  border-radius: 10px;
+  margin-bottom: 1px;
+  border: 1px solid black;
+  margin-right: 8px;
+}
+
+

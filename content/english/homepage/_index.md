@@ -2,18 +2,25 @@
 # Banner
 banner:
   title: "Helping businesses to build reliable and secure web applications"
-  content: "My core business is to create Fast, Performance-Focused, Scalable & Secure web applications using the latest and revolutionary technologies."
-  image: "/images/banner.png"
-  button:
+  content1: "My core business is to create Fast, Performance-Focused, Scalable & Secure web applications using the latest and revolutionary technologies."
+  content2: "I've been extremely busy preparing for the launch of my upcoming book. I will let you know the details about the book very soon. In the meantime, you can get some info about it below."
+  image: "/images/book/book-cover-3.jpg"
+  image_dark: "/images/book/book-cover-3-dark.jpg"
+  button1:
     enable: true
     label: "More about me"
     link: "/about/"
+  button2:
+    enable: true
+    label: "About my book"
+    link: "#book"
 
 # Features
 features:
   - title: "C#.Net Reference Book"
     info: "COMING SOON"
-    image: "/images/book.png"
+    image: "/images/book/book-cover-2.jpg"
+    image_dark: "/images/book/book-cover-2-dark.jpg"
     content: "This book explores different software development methods and habits that I have been applying for a long time. It encompasses coding, troubleshooting, software design, team work, refactoring, and architecture."
     bulletpoints:
       - "All the enterprise developers who are part of our industry and are interested in learning new things are the potential readers."
